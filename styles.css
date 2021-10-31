@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  color: #EEEEEE;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #181818e8;
+  color: #EEEEEE;
+  padding: 16px;
+  font-size: 48px;
+}
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  background-color: #181818e8;
+  color: #EEEEEE;
+}
+
+.calculator {
+  background-color: #4C4C4C;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column;
+  padding: 16px;
+  margin: 32px;
+  max-width: 500px;
+  min-height: 600px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+}
+
+.display {
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #4C4C4C;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Gemunu Libre', sans-serif;
+  height: 100px;
+  line-height: 40px;
+  padding: 16px 8px;
+  font-size: 3.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+}
+
+.buttons {
+  display: flex;  
+  justify-content: space-between;
+  flex-flow: row wrap;
+  gap: 8px;
+  max-width: 100%;
+  margin-top: 16px;
+  cursor: pointer;
+} 
+
+.buttons > * {
+  background-color: #4C4C4C;
+  border-radius: 8px;
+  font-size: 3rem;
+  font-weight: 500;
+  border: none;
+  height: 100px;
+  width: 110px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+  transition: 0.2s ease-in;
+  color: #3BBA8C;
+}
+
+.number, .decimal {
+  color: #EEEEEE
+}
+
+.buttons > *:hover {
+  background-color: #555555;
+
+}
+
+.equals  {
+  flex: 2 1 0;
+}
+
+.footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ebebeb; */
+  background-color: #181818e8;
+  color: #EEEEEE;
+  padding: 32px;
+} 
