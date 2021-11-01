@@ -6,23 +6,22 @@ let operand2 = ""
 let operator = ""
 let temp = ""
 
-
 const add = (num1, num2) => {
-    operand1 = parseInt(num1) + parseInt(num2)
+    operand1 = Number(num1) + Number(num2)
     clearTemporalOperations()
     logCurrentState()
     return operand1
 }
 
 const substract = (num1, num2) => {
-    operand1 = parseInt(num1) - parseInt(num2)
+    operand1 = Number(num1) - Number(num2)
     clearTemporalOperations()
     logCurrentState()
     return operand1
 }
 
 const multiply = (num1, num2) => {
-    operand1 = parseInt(num1) * parseInt(num2)
+    operand1 = Number(num1) * Number(num2)
     clearTemporalOperations()
     logCurrentState()
     return operand1
@@ -36,7 +35,7 @@ const divide = (num1, num2) => {
         logCurrentState()
         return
     } else {
-        operand1 = parseInt(num1) / parseInt(num2)
+        operand1 = Number(num1) / Number(num2)
         clearTemporalOperations()
         logCurrentState()
         return operand1
@@ -45,10 +44,16 @@ const divide = (num1, num2) => {
 }
 
 const concatValue = (event) => {
+    if (operand1 !== "" && operand2 === "" && operator === "" && temp === "") {
+        clearOperations()
         temp += event.target.value
         display.textContent = temp
         logCurrentState()
-
+    } else {
+        temp += event.target.value
+        display.textContent = temp
+        logCurrentState()
+    }
 }
 
 const selectOperator = (event) => {
@@ -116,9 +121,17 @@ const clearTemporalOperations = () => {
 }
 
 const checkForEqualSign = () => {
-    if (operand1 !== "" && operand2 === "" && operator !== "" && temp === "") {
+    if (operand1 === "" && operand2 === "" && operator === "" && temp === "") {
         clearOperations()
-        display.textContent = "Invalid operation. Start again"
+        display.textContent = "Invalid operation. Select your first number and start again."
+        return
+    }
+    if (operand1 !== "" && operand2 === "" && operator !== "" && temp === "") {
+        display.textContent = "Please select your second number."
+        return
+    }  
+     if (operand1 === "" && operand2 === "" && operator === "" && temp !== "") {
+        display.textContent = "Please select an operator and a second number."
         return
     } else {
         operand2 = temp
