@@ -98,7 +98,7 @@ body {
 
 }
 
-.equals  {
+.equals, .clear  {
   flex: 2 1 0;
 }
 

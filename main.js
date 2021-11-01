@@ -95,9 +95,10 @@ const addDecimal = (event) => {
 }
 
 const deleteValue = () => {
-    temp = temp.slice(0, -1)
-    display.textContent = temp
-    logCurrentState()
+        temp = temp.slice(0, -1)
+        display.textContent = temp
+        logCurrentState()
+        
 }
 
 const clearOperations = () => {
