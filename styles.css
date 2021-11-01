@@ -57,10 +57,11 @@ body {
   text-align: center;
   font-family: 'Gemunu Libre', sans-serif;
   height: 100px;
-  line-height: 40px;
+  line-height: 30px;
   padding: 16px 8px;
-  font-size: 3.5rem;
+  font-size: 2rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+  overflow: auto;
 }
 
 .buttons {
